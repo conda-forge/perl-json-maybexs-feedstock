@@ -1,10 +1,10 @@
 {% set name = "perl-json-maybexs" %}
-{% set version = "1.004004" %}
-{% set sha256 = "7ca5921306a544f621705dce987fe955b1a6833d0b195c094626a19dca094dba" %}
+{% set version = "1.004008" %}
+{% set sha256 = "cd3937afa78831f80a2ad5abab6c51b9e82fca4c31e5856ea208d598db5dc867" %}
 
 package:
   name: {{ name }}
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://cpan.metacpan.org/authors/id/E/ET/ETHER/JSON-MaybeXS-{{ version }}.tar.gz
@@ -42,9 +42,7 @@ about:
   license: GPL-1.0-or-later OR Artistic-1.0-Perl
   license_family: OTHER
   summary: 'Use Cpanel::JSON::XS with a fallback to JSON::XS and JSON::PP'
-  license_file:
-    - {{ environ["PREFIX"] }}/man/man1/perlartistic.1
-    - {{ environ["PREFIX"] }}/man/man1/perlgpl.1
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
